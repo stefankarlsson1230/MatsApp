@@ -3,4 +3,16 @@ body {
     margin: 0 auto;
 }
 
+main {
+    background-color: rgb(235, 235, 235);
+}
 
+input {
+    background-color: rgb(189, 189, 189);
+    border: none;
+}
+
+.result {
+    margin:1rem;
+    border: solid black 1px;
+}
