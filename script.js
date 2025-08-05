@@ -1,6 +1,12 @@
 let button = document.getElementById("calculate");
 button.addEventListener("click", calculations);
 
+const resultFields = document.querySelectorAll(".result");
+for(let i = 0; i < resultFields.length; i++) {
+    resultFields[i].addEventListener("click", copyToClipboard);
+}
+
+
 let field_X = document.getElementById("x");
 let field_X5000 = document.getElementById("x+5000");
 let field_X10000 = document.getElementById("x+10000");
@@ -28,10 +34,19 @@ function calculations() {
     resultsDiv.style.display = "block";
 }
 
-
 function calculate(field, sum, incomeA, incomeB) {
     let amount_from_A = Math.round(sum * (incomeA / (incomeA + incomeB)))
     let amount_from_B = Math.round(sum - amount_from_A);
 
     field.innerText = `${sum} kr\n\nFör ett gemensamt belopp på ${sum} kronor så ska A betala ${amount_from_A} kronor och B ska betala ${amount_from_B} kronor. A kommer få ${incomeA - amount_from_A} kronor kvar och B kommer få ${incomeB - amount_from_B} kronor kvar`;
+}
+
+function copyToClipboard() {
+    const obj = this;
+    navigator.clipboard.writeText(obj.innerText);
+    obj.style.backgroundColor = "white";
+
+    setTimeout (function() {
+       obj.style.backgroundColor = "rgb(189, 189, 189)"; 
+    }, 50);
 }
