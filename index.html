@@ -8,32 +8,32 @@
 </head>
 <body>
     <main>
-        <label for="income_A">Person A Inkomst</label>
-        <input id="income_A" type="number">
-        <br>
-        <label for="income_B">Person B Inkomst</label>
-        <input id="income_B" type="number">
-        <br>
-        <label for="total_sum">Gemensamt belopp</label>
-        <input id="total_sum" type="number">
-        <br>
-        <button id="calculate" type="button">Beräkna</button>
+        <div class="inputGroup">
+            <label for="income_A">Person A Inkomst</label>
+            <input id="income_A" type="number">
+        </div>
+        
+        <div class="inputGroup">
+            <label for="income_B">Person B Inkomst</label>
+            <input id="income_B" type="number">
+        </div>
+
+        <div class="inputGroup">
+            <label for="total_sum">Gemensamt belopp</label>
+            <input id="total_sum" type="number">
+        </div>
+        
+        <div id="buttonDiv">
+            <button id="calculate" type="button">Beräkna</button>
+        </div>
 
         <hr>
 
-        <div id="x" class="result">
-        </div>
-
-        <div id="x+5000" class="result">
-
-        </div>
-
-        <div id="x+10000" class="result">
-
-        </div>
-
-        <div id="x+15000" class="result">
-
+        <div id="resultsDiv">
+            <div id="x" class="result"></div>
+            <div id="x+5000" class="result"></div>
+            <div id="x+10000" class="result"></div>
+            <div id="x+15000" class="result"></div>
         </div>
 
         <script src="script.js"></script>

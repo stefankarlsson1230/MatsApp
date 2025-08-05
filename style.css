@@ -1,18 +1,50 @@
 body {
-    max-width: 500px;
+    max-width: 325px;
     margin: 0 auto;
+    font-weight: bold;
 }
 
-/* main {
+main {
     background-color: rgb(235, 235, 235);
+    padding: 2rem 1rem; 
+    border-radius: 2rem;
+    margin-top: 1rem;
+}
+
+.inputGroup {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
 }
 
 input {
-    background-color: rgb(189, 189, 189);
+    width: 100px;
     border: none;
-} */
+}
+
+#buttonDiv {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    width: 90%;
+    height: 2rem;
+    border-radius: 0.5rem;
+    border: black 1px solid;
+    font-size: 1.2rem;
+}
+
+hr {
+    border-color: black;
+}
+
+input, button, div.result {
+    background-color: rgb(189, 189, 189);
+}
 
 .result {
     margin:1rem;
+    padding: 0.5rem;
     border: solid black 1px;
 }
