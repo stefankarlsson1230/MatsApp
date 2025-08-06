@@ -15,15 +15,37 @@ let field_X15000 = document.getElementById("x+15000");
 
 let resultsDiv = document.getElementById("resultsDiv");
 
-// Hide resultboxes until something is calculated
+// Hide result-boxes until something is calculated
 resultsDiv.style.display = "none";
+
+// Load values from local storage
+if(!localStorage.getItem("incomeA")) {
+    document.getElementById("incomeA").value = 0;
+} 
+else {
+    document.getElementById("incomeA").value = localStorage.getItem("incomeA");
+}
+
+if(!localStorage.getItem("incomeB")) {
+    document.getElementById("incomeB").value = 0;
+}
+else {
+    document.getElementById("incomeB").value = localStorage.getItem("incomeB");
+}
+
+if(!localStorage.getItem("totalSum")) {
+    document.getElementById("totalSum").value = 45000;
+}
+else {
+    document.getElementById("totalSum").value = localStorage.getItem("totalSum");
+}
 
 
 // Initilize the calculations
 function calculations() {
-    let sum = Number(document.getElementById("total_sum").value);
-    let incomeA = Number(document.getElementById("income_A").value);
-    let incomeB = Number(document.getElementById("income_B").value);
+    let sum = Number(document.getElementById("totalSum").value);
+    let incomeA = Number(document.getElementById("incomeA").value);
+    let incomeB = Number(document.getElementById("incomeB").value);
 
     calculate(field_X, sum, incomeA, incomeB);
     calculate(field_X5000, sum + 5000, incomeA, incomeB);
@@ -35,10 +57,10 @@ function calculations() {
 
 // Calculations for each result-field
 function calculate(field, sum, incomeA, incomeB) {
-    let amount_from_A = Math.round(sum * (incomeA / (incomeA + incomeB)))
-    let amount_from_B = Math.round(sum - amount_from_A);
+    let amountFromA = Math.round(sum * (incomeA / (incomeA + incomeB)))
+    let amountFromB = Math.round(sum - amountFromA);
 
-    field.innerText = `${sum} kr\n\nFör ett gemensamt belopp på ${sum} kronor så ska A betala ${amount_from_A} kronor och B ska betala ${amount_from_B} kronor. A kommer få ${incomeA - amount_from_A} kronor kvar och B kommer få ${incomeB - amount_from_B} kronor kvar`;
+    field.innerText = `${sum} kr\n\nFör ett gemensamt belopp på ${sum} kronor så ska A betala ${amountFromA} kronor och B ska betala ${amountFromB} kronor. A kommer få ${incomeA - amountFromA} kronor kvar och B kommer få ${incomeB - amountFromB} kronor kvar`;
 }
 
 // Copying text from result-field to clipboard when clicked
