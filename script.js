@@ -72,4 +72,6 @@ function copyToClipboard() {
     setTimeout (function() {
        obj.style.backgroundColor = "rgb(189, 189, 189)"; 
     }, 50);
+
+    alert(obj.innerText + "\n\nSkapat som urklipp");
 }
