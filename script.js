@@ -33,6 +33,20 @@ else {
     document.getElementById("incomeB").value = localStorage.getItem("incomeB");
 }
 
+if(!localStorage.getItem("minA")) {
+    document.getElementById("minA").value = 0;
+} 
+else {
+    document.getElementById("minA").value = localStorage.getItem("minA");
+}
+
+if(!localStorage.getItem("minB")) {
+    document.getElementById("minB").value = 0;
+} 
+else {
+    document.getElementById("minB").value = localStorage.getItem("minB");
+}
+
 if(!localStorage.getItem("totalSum")) {
     document.getElementById("totalSum").value = 45000;
 }
@@ -73,5 +87,5 @@ function copyToClipboard() {
        obj.style.backgroundColor = "rgb(189, 189, 189)"; 
     }, 50);
 
-    alert(obj.innerText + "\n\nSkapat som urklipp");
+    alert(obj.innerText + "\n\nSparat som urklipp");
 }
