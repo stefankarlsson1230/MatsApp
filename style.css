@@ -11,6 +11,13 @@ main {
     margin-top: 1rem;
 }
 
+#settings{
+    display: flex;
+    justify-content: end;
+    padding-right: 1rem;
+}
+
+
 .inputGroup {
     display: flex;
     justify-content: space-between;
