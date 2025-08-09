@@ -55,3 +55,23 @@ input, button, div.result {
     padding: 0.5rem;
     border: solid black 1px;
 }
+
+/* Inställningar */
+h2 {
+    text-align: center;
+}
+
+#saveOrCancel {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#saveOrCancel button {
+    width: 40%;
+}
+
+button a {
+    text-decoration: none;
+    color: black;
+}

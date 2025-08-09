@@ -5,13 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mats App</title>
     <link href="style.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/be589f04a8.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <main>
-        <div id="settings">
-            <a href="settings.html"><i class="fa-solid fa-gear" id="settingsIcon"></i></a>
-        </div>
+        <h2>Inställningar</h2>
+        <hr>
         <div class="inputGroup">
             <label for="incomeA">Person A Inkomst</label>
             <input id="incomeA" type="number">
@@ -36,20 +34,15 @@
             <label for="totalSum">Gemensamt belopp</label>
             <input id="totalSum" type="number">
         </div>
-        
-        <div id="buttonDiv">
-            <button id="calculate" type="button">Beräkna</button>
-        </div>
 
         <hr>
 
-        <div id="resultsDiv">
-            <div id="x" class="result"></div>
-            <div id="x+5000" class="result"></div>
-            <div id="x+10000" class="result"></div>
-            <div id="x+15000" class="result"></div>
+        <div id="saveOrCancel">
+            <button id="saveButton" type="button"><a href="index.html">Spara</a></button>
+            <button type="button"><a href="index.html">Avbryt</a></button>
         </div>
     </main>
-    <script src="scriptIndex.js"></script>
+
+    <script src="scriptSettings.js"></script>
 </body>
 </html>
