@@ -4,6 +4,11 @@ body {
     font-weight: bold;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 main {
     background-color: rgb(235, 235, 235);
     padding: 2rem 1rem; 
@@ -53,7 +58,7 @@ input, button, div.result {
 .result {
     margin:1rem;
     padding: 0.5rem;
-    border: solid black 1px;
+    border: solid black 2px;
 }
 
 /* Inställningar */
@@ -66,12 +71,15 @@ h2 {
     justify-content: space-between;
 }
 
-
 #saveOrCancel button {
     width: 40%;
+    display: flex;
 }
 
 button a {
-    text-decoration: none;
-    color: black;
+    width: 100%;
+    justify-content: center;
+    padding-top: 0.2rem;
 }
+
+
